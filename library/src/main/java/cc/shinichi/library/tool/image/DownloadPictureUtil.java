@@ -8,8 +8,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.transition.Transition;
@@ -24,7 +24,6 @@ import cc.shinichi.library.ImagePreview;
 import cc.shinichi.library.glide.FileTarget;
 import cc.shinichi.library.tool.file.FileUtil;
 import cc.shinichi.library.tool.file.SingleMediaScanner;
-import cc.shinichi.library.tool.text.MD5Util;
 import cc.shinichi.library.tool.ui.ToastUtil;
 
 /**

@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SwitchCompat;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import cc.shinichi.bigimageviewpager.glide.GlideV4Engine;
 import cc.shinichi.library.ImagePreview;
 import cc.shinichi.library.bean.ImageInfo;
 import cc.shinichi.library.glide.ImageLoader;
@@ -37,7 +36,7 @@ import cc.shinichi.library.view.listener.OnBigImageLongClickListener;
 import cc.shinichi.library.view.listener.OnBigImagePageChangeListener;
 import cc.shinichi.library.view.listener.OnOriginProgressListener;
 
-import static android.support.v4.content.PermissionChecker.PERMISSION_GRANTED;
+import static androidx.core.content.PermissionChecker.PERMISSION_GRANTED;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -381,19 +380,19 @@ public class MainActivity extends AppCompatActivity {
 
     // 去选择图片
     private void chooseImage() {
-        Matisse.from(MainActivity.this)
-                .choose(MimeType.ofImage())
-                .capture(true)
-                .captureStrategy(new CaptureStrategy(true, "cc.shinichi.bigimageviewpager.fileprovider", "BigImage"))
-                .countable(true)
-                .maxSelectable(30)
-                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-                .thumbnailScale(0.85f)
-                .imageEngine(new GlideV4Engine())
-                .theme(com.zhihu.matisse.R.style.Matisse_Zhihu)
-                .showSingleMediaType(true)
-                .originalEnable(true)
-                .forResult(1);
+//        Matisse.from(MainActivity.this)
+//                .choose(MimeType.ofImage())
+//                .capture(true)
+//                .captureStrategy(new CaptureStrategy(true, "cc.shinichi.bigimageviewpager.fileprovider", "BigImage"))
+//                .countable(true)
+//                .maxSelectable(30)
+//                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+//                .thumbnailScale(0.85f)
+//                .imageEngine(new GlideV4Engine())
+//                .theme(com.zhihu.matisse.R.style.Matisse_Zhihu)
+//                .showSingleMediaType(true)
+//                .originalEnable(true)
+//                .forResult(1);
     }
 
     @Override
